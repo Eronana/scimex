@@ -10,7 +10,7 @@
 由于使用了代码注入技术, 所以需要关闭部分[SIP功能](https://support.apple.com/zh-cn/HT204899)
 
 ## 使用说明
-首先关闭SIP, 然后在终端里运行下面命令:
+首先[关闭SIP](#如何关闭sip), 然后在终端里运行下面命令:
 ```bash
 git clone https://github.com/Eronana/scimex.git
 cd scimex
