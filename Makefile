@@ -15,7 +15,7 @@ $(BINDIR)/scimex: $(shell find $(SRCDIR)/injector -name *.cpp -o -name *.c -o -n
 	@mkdir -p $(BINDIR)
 	$(CC) $(CFLAGS) -Wno-implicit-function-declaration -framework CoreFoundation -o $@ $(shell find $(SRCDIR)/injector -name *.cpp -o -name *.c)
 
-$(BINDIR)/scimex.dylib: $(shell find $(SRCDIR)/injector -name *.m -o -name *.h)
+$(BINDIR)/scimex.dylib: $(shell find $(SRCDIR)/injlib -name *.m -o -name *.h)
 	@mkdir -p $(BINDIR)
 	$(CC) $(CFLAGS) -Wno-objc-method-access -framework Foundation -dynamiclib -o $@ $(shell find $(SRCDIR)/injlib -name *.m)
 
