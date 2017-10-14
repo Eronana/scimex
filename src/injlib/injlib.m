@@ -75,15 +75,19 @@ BOOL shiftFlag;
 
     if(type==NSEventTypeFlagsChanged)
     {
-        // 按下shift 设定flag
-        if(modifierFlags&NSEventModifierFlagShift)shiftFlag=YES;
-        // 松开shift
-        else if(!modifierFlags&&shiftFlag)
+        // 只有在没有按下CAPSLOCK时, 才响应shift
+        if(!(modifierFlags&NSEventModifierFlagCapsLock))
         {
-            shiftFlag=NO;
-            isShift = !isShift;
-            // 已经输入文本的情况下按了shift, 就把提交inline文本
-            if(inputTextLength)[self commitInlineTextCandidate];
+            // 按下shift 设定flag
+            if(modifierFlags&NSEventModifierFlagShift)shiftFlag=YES;
+            // 松开shift
+            else if(!modifierFlags&&shiftFlag)
+            {
+                shiftFlag=NO;
+                isShift = !isShift;
+                // 已经输入文本的情况下按了shift, 就提交inline文本
+                if(inputTextLength)[self commitInlineTextCandidate];
+            }
         }
     }
 
