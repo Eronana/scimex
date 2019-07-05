@@ -1,5 +1,5 @@
 # scimex
-一个用于macOS High Sierra简体中文输入法的插件
+一个用于macOS简体中文输入法的插件
 
 ## 简介
 通过向输入法进程注入代码, 实现下面几个功能:
@@ -29,7 +29,7 @@ make install
 ## 注意事项
 1. 目前只有基础功能, 并且没有做配置选项, 一旦启用则会开插件的全部功能
 2. 如有其他需求, 请自行修改并编译
-3. 仅支持Sierra和High Sierra
+3. 支持`Sierra`, `High Sierra`以及`Mojave`
 
 ## 感谢
 非常感谢[osxinj](https://github.com/scen/osxinj)和[mach_inject](https://github.com/rentzsch/mach_inject)这两个库, 有了它们我才能很容易的实现在macOS平台的代码注入.
