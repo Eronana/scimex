@@ -30,6 +30,7 @@ make install
 1. 目前只有基础功能, 并且没有做配置选项, 一旦启用则会开插件的全部功能
 2. 如有其他需求, 请自行修改并编译
 3. 支持`Sierra`, `High Sierra`, `Mojave`, `Catalina`, `Big Sur`
+4. 不支持M1
 
 ## 感谢
 非常感谢[osxinj](https://github.com/scen/osxinj)和[mach_inject](https://github.com/rentzsch/mach_inject)这两个库, 有了它们我才能很容易的实现在macOS平台的代码注入.
