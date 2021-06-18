@@ -106,7 +106,7 @@ BOOL shiftFlag;
         [self commitSelectedCandidate];
         return NO;
     }
-    return (BOOL)_handleEvent(self,_cmd,event,sender);
+    return ((BOOL (*)(NSObject*, SEL,NSEvent*, id))_handleEvent)(self,_cmd,event,sender);
 }
 
 - (void) updateSettingsForKeyboardLayout
